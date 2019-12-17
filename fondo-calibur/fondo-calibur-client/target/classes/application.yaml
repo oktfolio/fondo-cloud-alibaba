@@ -1,0 +1,49 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: fondo-calibur-client
+  datasource:
+    druid:
+      url: ${MYSQL_URL:jdbc:mysql://192.168.50.127:3306/calibur?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC}
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      stat-view-servlet:
+        url-pattern: /druid/*
+        login-password: root
+        login-username: root
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat
+server:
+  port: 28080
+logging:
+  level:
+    org.springframework.boot.autoconfigure: ERROR
+
+---
+server:
+  port: 28081
+spring:
+  profiles: test
+
+---
+server:
+  port: 28082
+spring:
+  profiles: prod

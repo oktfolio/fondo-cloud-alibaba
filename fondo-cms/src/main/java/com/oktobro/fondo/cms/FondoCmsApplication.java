@@ -1,4 +1,4 @@
-package com.oktobro.fondo.ucenter;
+package com.oktobro.fondo.cms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019/12/17
  */
 @SpringBootApplication
-public class FondoCloudUmpsApplication {
+public class FondoCmsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FondoCloudUmpsApplication.class, args);
+        SpringApplication.run(FondoCmsApplication.class);
     }
 }
