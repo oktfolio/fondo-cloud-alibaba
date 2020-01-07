@@ -1,8 +1,8 @@
 package com.oktobro.fondo.common.result;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.http.HttpStatus;
 
 import java.time.LocalDateTime;
@@ -11,14 +11,14 @@ import java.time.LocalDateTime;
  * @author Oktfolio oktfolio@gmail.com
  * @date 2019/09/13
  */
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResultEntity {
     private Integer code;
     private String message;
     private Object data;
     @JsonIgnore
+    @JSONField(serialize = false)
     private HttpStatus status;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss'+'SSS")
     private LocalDateTime timestamp;
 
     public Integer getCode() {

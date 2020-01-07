@@ -1,4 +1,4 @@
-package com.oktobro.fondo.utils;
+package com.oktobro.fondo.utils.rsa;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;

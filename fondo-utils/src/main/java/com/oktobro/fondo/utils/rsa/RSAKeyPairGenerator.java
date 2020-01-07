@@ -1,4 +1,4 @@
-package com.oktobro.fondo.utils;
+package com.oktobro.fondo.utils.rsa;
 
 import java.security.*;
 import java.util.Base64;

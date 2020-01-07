@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: fondo-ucenter
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3308/fondo?characterEncoding=utf-8&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+server:
+  port: 18080
