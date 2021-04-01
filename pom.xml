@@ -38,7 +38,7 @@
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
-        <guava.version>28.1-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <gson.verion>2.8.6</gson.verion>
         <apache-commons.version>3.9</apache-commons.version>
         <druid.version>1.1.21</druid.version>
